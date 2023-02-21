@@ -1,0 +1,10 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Iris</ShortName>
+  <Description>Search the web with Iris</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" method="get" template="https://iris.noton.tk/?query={searchTerms}" />
+  <Url type="application/x-suggestions+json" method="get" template="https://iris.noton.tk/autocomplete?q={searchTerms}" />
+  <Image width="16" height="16" type="image/png">https://example.com/iris-icon.png</Image>
+  <Image width="64" height="64" type="image/png">https://example.com/iris-icon.png</Image>
+  <Image width="128" height="128" type="image/png">https://example.com/iris-icon.png</Image>
+</OpenSearchDescription>
