@@ -1,8 +1,7 @@
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input[name=q]');
 
-searchForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+function submitSearchForm() {
     let searchUrl = 'https://www.bing.com/search?q=';
     let query = searchInput.value.trim();
     let words = query.split(' ');
@@ -56,4 +55,18 @@ searchForm.addEventListener('submit', (event) => {
     }
 
     window.location.href = searchUrl;
+}
+
+// Check if a query parameter is present in the URL
+const urlParams = new URLSearchParams(window.location.search);
+const query = urlParams.get('query');
+if (query) {
+    searchInput.value = query;
+    submitSearchForm();
+}
+
+// Add event listener to the search form
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    submitSearchForm();
 });
