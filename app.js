@@ -21,6 +21,7 @@ preloaderImg.addEventListener('load', (event) => {
 
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input[name=q]');
+const overlay = document.querySelector('.overlay');
 
 function submitSearchForm() {
     let searchUrl = 'https://www.bing.com/search?q=';
@@ -92,7 +93,12 @@ if (query) {
 // Add event listener to the search form
 searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    submitSearchForm();
+    overlay.style.opacity = 1;
+    overlay.style.zIndex = 999;
+    setTimeout(function () {
+        submitSearchForm(); // submit the form after a 0.5s delay
+    }, 64);
+
 });
 
 document.getElementById("search-box").focus();
