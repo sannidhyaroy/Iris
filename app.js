@@ -1,3 +1,19 @@
+// Get the flower icon element
+const flowerIcon = document.querySelector('.bi-flower3');
+
+// Add the 'rotate' class to the flower icon element
+flowerIcon.classList.add('rotate');
+
+const imageUrl = "https://source.unsplash.com/random/1920x1080/?iris%20flower";
+const bgElement = document.querySelector("body");
+let preloaderImg = document.createElement("img");
+preloaderImg.src = imageUrl;
+preloaderImg.addEventListener('load', (event) => {
+    bgElement.style.backgroundImage = `url(${imageUrl})`;
+    preloaderImg = null;
+    flowerIcon.classList.remove('rotate');
+});
+
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input[name=q]');
 
