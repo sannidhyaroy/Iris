@@ -12,7 +12,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://source.unsplash.com/random/1920x1080/?iris%20flower');
+    /* background-image: url('https://source.unsplash.com/random/1920x1080/?iris%20flower'); */
     background-size: cover;
     /* filter: blur(10px); */
     z-index: -1;
@@ -25,7 +25,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: -1;
 }
 
@@ -87,10 +87,6 @@ body {
         transform: rotate(0deg);
     }
 
-    50% {
-        transform: rotate(540deg);
-    }
-
     100% {
         transform: rotate(1080deg);
     }
@@ -98,4 +94,24 @@ body {
 
 .rotate {
     animation: rotate 2s cubic-bezier(0.5, 0.2, 0.25, 0.8) infinite;
+}
+
+.rotate.stop {
+    animation: none;
+    transition: transform 1s ease-out;
+    transform: rotate(1080deg);
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100;
+    }
+}
+
+.opacity {
+    animation: opacity 2s cubic-bezier(0.5, 0.2, 0.25, 0.8);
 }

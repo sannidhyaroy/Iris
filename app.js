@@ -5,14 +5,17 @@ const flowerIcon = document.querySelector('.bi-flower3');
 flowerIcon.classList.add('rotate');
 
 const imageUrl = "https://source.unsplash.com/random/1920x1080/?iris%20flower";
-const bgElement = document.querySelector("body");
+const bgElement = document.getElementsByClassName("bg-image")[0];
 let preloaderImg = document.createElement("img");
 preloaderImg.src = imageUrl;
 preloaderImg.addEventListener('load', (event) => {
     bgElement.style.backgroundImage = `url(${imageUrl})`;
+    bgElement.classList.add('opacity');
     preloaderImg = null;
-    flowerIcon.classList.remove('rotate');
+    flowerIcon.classList.add('stop');
 });
+
+// SEARCH LOGIC:
 
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input[name=q]');
@@ -86,3 +89,5 @@ searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
     submitSearchForm();
 });
+
+document.getElementById("search-box").focus();
