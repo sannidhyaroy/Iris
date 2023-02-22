@@ -6,15 +6,18 @@ body {
     background-color: black;
 }
 
+body,
+html {
+    overflow: hidden;
+}
+
 .bg-image {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /* background-image: url('https://source.unsplash.com/random/1920x1080/?iris%20flower'); */
     background-size: cover;
-    /* filter: blur(10px); */
     z-index: -1;
 }
 
@@ -47,6 +50,9 @@ body {
     border-radius: 20px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    width: 30em;
+    height: 50px;
+    margin-bottom: 40px;
 }
 
 .search-bar input[type="text"] {
@@ -58,6 +64,12 @@ body {
     border: none;
     outline: none;
     background-color: #fff;
+    user-select: contain;
+}
+
+.search-bar input[type="text"]::placeholder {
+    user-select: none;
+    pointer-events: none;
 }
 
 .search-button {
@@ -114,4 +126,30 @@ body {
 
 .opacity {
     animation: opacity 2s cubic-bezier(0.5, 0.2, 0.25, 0.8);
+}
+
+/* For devices with a screen width of 600px or less */
+@media only screen and (max-width: 600px) {
+    .search-bar {
+        width: 20em;
+    }
+
+    .search-bar input[type="text"] {
+        font-size: 14px;
+        padding: 17px 20px;
+        /* border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px; */
+    }
+}
+
+/* For devices with a screen width of 375px or less */
+@media only screen and (max-width: 375px) {
+    .search-bar {
+        width: 16em;
+    }
+
+    .search-bar input[type="text"] {
+        font-size: 12px;
+        padding: 18px 20px;
+    }
 }

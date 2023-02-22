@@ -57,13 +57,16 @@ function submitSearchForm() {
                 searchUrl = `https://www.netflix.com/search?q=${searchQuery}`;
                 break;
             case '!cr':
-                searchUrl = `https://www.crunchyroll.com/search?from=&q=${searchQuery}`;
+                searchUrl = `https://www.crunchyroll.com/search?q=${searchQuery}`;
                 break;
             case '!yt':
                 searchUrl = `https://www.youtube.com/results?search_query=${searchQuery}`;
                 break;
             case '!rd':
                 searchUrl = `https://www.reddit.com/search/?q=${searchQuery}`;
+                break;
+            case '!ai':
+                searchUrl = `https://www.perplexity.ai/?q=${searchQuery}`;
                 break;
             // Add more bangs as needed
             default:
