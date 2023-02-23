@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-image {
+    position: fixed;
+    background-image: url('Iris Flower.png');
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    z-index: -1;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.logo {
+    display: flex;
+    left: 1em;
+    /* align-self: center; */
+    align-items: center;
+}
+
+.logolink {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menuBtns {
+    display: flex;
+    right: 1em;
+    /* align-self: center; */
+}
+
+.menu {
+    position: relative;
+    display: flex;
+    padding-inline: 2rem;
+    justify-content: space-between;
+}
+
+.footer {
+    font-size: 18px;
+    user-select: none;
+}
+
+.footer-logo {
+    width: 32px;
+    height: 32px;
+}
+
+.primaryMenuBtn {
+    align-self: center;
+    /* justify-self: start; */
+    width: 8em;
+    height: 3.5em;
+    background-color: #5141A0;
+    color: white;
+    font-weight: bolder;
+    margin-right: 1em;
+    border: none;
+    border-radius: 2em;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    user-select: none;
+}
+
+.primaryMenuBtn:hover {
+    background-color: #352165;
+}
+
+.MenuBtn {
+    width: 7em;
+    height: 3.5em;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    margin-right: 1em;
+    border: none;
+    border-radius: 2em;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.PageName {
+    display: flex;
+    align-self: center;
+    padding-inline: 1rem;
+    margin: 0;
+    color: white;
+    font-size: 64px;
+    font-family: 'Babylonica', 'Roboto', sans-serif;
+    user-select: none;
+}
+
+.Introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Headline {
+    font-family: 'Shantell Sans', 'Roboto', sans-serif;
+    font-size: 128px;
+    color: #7a84e3;
+    margin: 1rem;
+    margin-top: 10rem;
+    user-select: none;
+}
+
+.Tagline {
+    font-family: 'Kaushan Script', 'Roboto', sans-serif;
+    font-size: 48px;
+    color: #fdea15;
+    margin: 1rem;
+    user-select: none;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 2em;
+}
+
+.helloIris {
+    text-align: justify;
+    font-size: 28px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Red Hat Display', 'Roboto', sans-serif;
+    padding: 1em 3em;
+    color: #1c1c1c;
+    user-select: none;
+}
+
+.qna {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 2rem 10rem;
+    border-left: 5px solid white;
+}
+
+.q {
+    font-size: 64px;
+    margin: 0% 3%;
+    font-family: 'Jost', 'Roboto', sans-serif;
+}
+
+.ans {
+    font-size: 28px;
+    margin: 0% 3%;
+    padding-bottom: 2%;
+    font-family: 'Nunito', 'Roboto', sans-serif;
+}
+
+.glass {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* set the background color with opacity */
+    backdrop-filter: blur(15px);
+    /* apply a blur filter to the background */
+    border-radius: 10em;
+    /* add some border-radius to the div */
+    padding: 20px;
+    /* add some padding to the div */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+    /* add a box shadow to the div for depth */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.section-title {
+    font-size: 72px;
+    margin: 1rem 0rem;
+    font-family: 'Jost', 'Roboto', sans-serif;
+    align-self: center;
+}
+
+.table {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 1rem 10em 0rem 10rem;
+}
+
+.column {
+    flex-basis: calc(50% - 10px);
+}
+
+.flex-center {
+    align-self: center;
+}
+
+.subtitle {
+    margin: 1em;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+    user-select: none;
+}
+
+td {
+    padding: 8px;
+    font-size: 26px;
+    font-family: 'Nunito', 'Roboto', sans-serif;
+    text-align: left;
+    border-block: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #5141a042;
+    color: #fdea15;
+}
+
+.spacer-5 {
+    width: 0.5rem;
+}
+
+/* For devices with a screen width of 600px or less */
+@media only screen and (max-width: 600px) {
+}
+
+/* For devices with a screen width of 375px or less */
+@media only screen and (max-width: 375px) {
+}

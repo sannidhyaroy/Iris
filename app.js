@@ -1,24 +1,3 @@
-// Get the flower icon element
-const flowerIcon = document.querySelector('.bi-flower3');
-
-// Add the 'rotate' class to the flower icon element
-flowerIcon.classList.add('rotate');
-let imageUrl = "https://source.unsplash.com/random/1920x1080/?iris%20flower";
-if (screen.availHeight > screen.availWidth) {
-    imageUrl = "https://source.unsplash.com/random/1080x1920/?iris%20flower";
-}
-const bgElement = document.getElementsByClassName("bg-image")[0];
-let preloaderImg = document.createElement("img");
-preloaderImg.src = imageUrl;
-preloaderImg.addEventListener('load', (event) => {
-    bgElement.style.backgroundImage = `url(${imageUrl})`;
-    bgElement.classList.add('opacity');
-    preloaderImg = null;
-    flowerIcon.classList.add('stop');
-});
-
-// SEARCH LOGIC:
-
 const searchForm = document.querySelector('form');
 const searchInput = document.querySelector('input[name=q]');
 const overlay = document.querySelector('.overlay');
@@ -37,6 +16,7 @@ function submitSearchForm() {
 
         if (!sameBangs) {
             // Show error message to user
+            removeOverlay();
             alert('More than one type of bang found in search query!');
             return;
         }
@@ -63,11 +43,29 @@ function submitSearchForm() {
             case '!yt':
                 searchUrl = `https://www.youtube.com/results?search_query=${searchQuery}`;
                 break;
-            case '!rd':
+            case '!r':
                 searchUrl = `https://www.reddit.com/search/?q=${searchQuery}`;
                 break;
             case '!ai':
                 searchUrl = `https://www.perplexity.ai/?q=${searchQuery}`;
+                break;
+            case '!w':
+                searchUrl = `https://en.wikipedia.org/wiki/${searchQuery}`;
+                break;
+            case '!mal':
+                searchUrl = `https://myanimelist.net/search/all?q=${searchQuery}`;
+                break;
+            case '!an':
+                searchUrl = `https://anilist.co/search/anime?search=${searchQuery}`;
+                break;
+            case '!b':
+                searchUrl = `https://www.bing.com/search?q=${searchQuery}`;
+                break;
+            case '!a':
+                searchUrl = `https://www.amazon.in/s?k=${searchQuery}`;
+                break;
+            case '!tw':
+                searchUrl = `https://twitter.com/search?q=${searchQuery}`;
                 break;
             // Add more bangs as needed
             default:
@@ -82,6 +80,14 @@ function submitSearchForm() {
     window.location.href = searchUrl;
 }
 
+function navigateAI() {
+    let query = searchInput.value.trim();
+    const trimmedQuery = query.replace(/\!ai/g, '');
+    window.location.href = `https://www.perplexity.ai/?q=${trimmedQuery}`;
+    overlay.style.transition = "opacity 1s ease";
+    addOverlay();
+}
+
 // Check if a query parameter is present in the URL
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get('query');
@@ -93,12 +99,33 @@ if (query) {
 // Add event listener to the search form
 searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    overlay.style.opacity = 1;
-    overlay.style.zIndex = 999;
+    addOverlay();
     setTimeout(function () {
         submitSearchForm(); // submit the form after a 0.5s delay
     }, 64);
 
+});
+
+function addOverlay() {
+    overlay.style.opacity = 1;
+    overlay.style.zIndex = 999;
+}
+
+function removeOverlay() {
+    overlay.style.opacity = 0;
+    overlay.style.zIndex = -1;
+}
+
+document.addEventListener("keydown", function (event) {
+    var searchInput = document.querySelector("#search-box");
+    if (document.activeElement === searchInput) return;
+
+    if (event.code === "Slash") {
+        event.preventDefault();
+        searchInput.focus();
+        searchInput.value = searchInput.value;
+        searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+    }
 });
 
 document.getElementById("search-box").focus();

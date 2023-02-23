@@ -1,2 +1,2 @@
 # Iris
- A Custom Search Engine implementation by Team Noton
+The Search Experience you need to Blossom
