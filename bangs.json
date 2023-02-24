@@ -1,16 +1,58 @@
 {
-  "!g": "https://www.google.com/search?q=",
-  "!e": "https://www.ecosia.org/search?q=",
-  "!ddg": "https://duckduckgo.com/?q=",
-  "!nf": "https://www.netflix.com/search?q=",
-  "!cr": "https://www.crunchyroll.com/search?q=",
-  "!yt": "https://www.youtube.com/results?search_query=",
-  "!r": "https://www.reddit.com/search/?q=",
-  "!ai": "https://www.perplexity.ai/?q=",
-  "!w": "https://en.wikipedia.org/wiki/",
-  "!mal": "https://myanimelist.net/search/all?q=",
-  "!an": "https://anilist.co/search/anime?search=",
-  "!b": "https://www.bing.com/search?q=",
-  "!a": "https://www.amazon.in/s?k=",
-  "!tw": "https://twitter.com/search?q="
+  "!g": {
+    "url": "https://www.google.com/search?q=",
+    "name": "Google"
+  },
+  "!e": {
+    "url": "https://www.ecosia.org/search?q=",
+    "name": "Ecosia"
+  },
+  "!ddg": {
+    "url": "https://duckduckgo.com/?q=",
+    "name": "DuckDuckGo"
+  },
+  "!nf": {
+    "url": "https://www.netflix.com/search?q=",
+    "name": "Netflix"
+  },
+  "!cr": {
+    "url": "https://www.crunchyroll.com/search?q=",
+    "name": "Crunchyroll"
+  },
+  "!yt": {
+    "url": "https://www.youtube.com/results?search_query=",
+    "name": "YouTube"
+  },
+  "!r": {
+    "url": "https://www.reddit.com/search/?q=",
+    "name": "Reddit"
+  },
+  "!ai": {
+    "url": "https://www.perplexity.ai/?q=",
+    "name": "Perplexity AI"
+  },
+  "!w": {
+    "url": "https://en.wikipedia.org/wiki/",
+    "name": "Wikipedia"
+  },
+  "!mal": {
+    "url": "https://myanimelist.net/search/all?q=",
+    "name": "MyAnimeList"
+  },
+  "!an": {
+    "url": "https://anilist.co/search/anime?search=",
+    "name": "AniList"
+  },
+  "!b": {
+    "url": "https://www.bing.com/search?q=",
+    "name": "Bing"
+  },
+  "!a": {
+    "url": "https://www.amazon.in/s?k=",
+    "name": "Amazon India"
+  },
+  "!tw": {
+    "url": "https://twitter.com/search?q=",
+    "name": "Twitter"
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "bangs.json"
+      ],
+      "url": "/user.schema.json"
+    }
+  ],
+  "editor.defaultFormatter": "vscode.json-language-features"
+}

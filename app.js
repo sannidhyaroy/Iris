@@ -37,7 +37,7 @@ function submitSearchForm() {
     let searchQuery = words.filter((word) => !word.startsWith("!")).join(" ");
 
     if (bang in BANGS_URLS) {
-      searchUrl = BANGS_URLS[bang] + encodeURIComponent(searchQuery);
+      searchUrl = BANGS_URLS[bang]["url"] + encodeURIComponent(searchQuery);
     } else {
       searchUrl += encodeURIComponent(query);
     }
