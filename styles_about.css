@@ -328,6 +328,9 @@ tr:hover {
   td {
     font-size: 12px;
   }
+  .primaryMenuBtn {
+    width: 7em;
+  }
   .subtitle {
     font-size: 13px;
   }
@@ -396,6 +399,9 @@ tr:hover {
   }
   td {
     font-size: 10px;
+  }
+  .primaryMenuBtn {
+    width: 7em;
   }
   .subtitle {
     font-size: 10px;
