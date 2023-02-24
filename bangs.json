@@ -3,13 +3,25 @@
     "url": "https://www.google.com/search?q=",
     "name": "Google"
   },
-  "!e": {
-    "url": "https://www.ecosia.org/search?q=",
-    "name": "Ecosia"
+  "!b": {
+    "url": "https://www.bing.com/search?q=",
+    "name": "Bing"
   },
   "!ddg": {
     "url": "https://duckduckgo.com/?q=",
     "name": "DuckDuckGo"
+  },
+  "!e": {
+    "url": "https://www.ecosia.org/search?q=",
+    "name": "Ecosia"
+  },
+  "!a": {
+    "url": "https://www.amazon.in/s?k=",
+    "name": "Amazon India"
+  },
+  "!yt": {
+    "url": "https://www.youtube.com/results?search_query=",
+    "name": "YouTube"
   },
   "!nf": {
     "url": "https://www.netflix.com/search?q=",
@@ -19,21 +31,17 @@
     "url": "https://www.crunchyroll.com/search?q=",
     "name": "Crunchyroll"
   },
-  "!yt": {
-    "url": "https://www.youtube.com/results?search_query=",
-    "name": "YouTube"
+  "!ai": {
+    "url": "https://www.perplexity.ai/?q=",
+    "name": "Perplexity AI"
   },
   "!r": {
     "url": "https://www.reddit.com/search/?q=",
     "name": "Reddit"
   },
-  "!ai": {
-    "url": "https://www.perplexity.ai/?q=",
-    "name": "Perplexity AI"
-  },
-  "!w": {
-    "url": "https://en.wikipedia.org/wiki/",
-    "name": "Wikipedia"
+  "!sp": {
+    "url": "https://open.spotify.com/search/",
+    "name": "Spotify"
   },
   "!mal": {
     "url": "https://myanimelist.net/search/all?q=",
@@ -43,13 +51,9 @@
     "url": "https://anilist.co/search/anime?search=",
     "name": "AniList"
   },
-  "!b": {
-    "url": "https://www.bing.com/search?q=",
-    "name": "Bing"
-  },
-  "!a": {
-    "url": "https://www.amazon.in/s?k=",
-    "name": "Amazon India"
+  "!w": {
+    "url": "https://en.wikipedia.org/wiki/",
+    "name": "Wikipedia"
   },
   "!tw": {
     "url": "https://twitter.com/search?q=",

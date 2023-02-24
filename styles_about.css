@@ -231,11 +231,11 @@ button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 1rem 10em 0rem 10rem;
+  margin: 1rem 10em 0rem 10em;
 }
 
 .column {
-  flex-basis: calc(50% - 10px);
+  flex-basis: calc(50% - 2em);
 }
 
 .flex-center {
@@ -256,7 +256,7 @@ table {
 }
 
 td {
-  padding: 8px;
+  padding: 7px;
   font-size: 26px;
   font-family: "Nunito", "Roboto", sans-serif;
   text-align: left;
@@ -272,6 +272,15 @@ tr:hover {
   width: 0.5rem;
 }
 
+/* For devices with a screen width of 1080px or less */
+@media only screen and (max-width: 1080px) {
+  .table {
+    margin: 1rem 5rem 0rem 5rem;
+  }
+  td {
+    font-size: 18px;
+  }
+}
 /* For devices with a screen width of 600px or less */
 @media only screen and (max-width: 600px) {
   .bg-image {
