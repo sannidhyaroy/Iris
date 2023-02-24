@@ -1,0 +1,16 @@
+{
+  "!g": "https://www.google.com/search?q=",
+  "!e": "https://www.ecosia.org/search?q=",
+  "!ddg": "https://duckduckgo.com/?q=",
+  "!nf": "https://www.netflix.com/search?q=",
+  "!cr": "https://www.crunchyroll.com/search?q=",
+  "!yt": "https://www.youtube.com/results?search_query=",
+  "!r": "https://www.reddit.com/search/?q=",
+  "!ai": "https://www.perplexity.ai/?q=",
+  "!w": "https://en.wikipedia.org/wiki/",
+  "!mal": "https://myanimelist.net/search/all?q=",
+  "!an": "https://anilist.co/search/anime?search=",
+  "!b": "https://www.bing.com/search?q=",
+  "!a": "https://www.amazon.in/s?k=",
+  "!tw": "https://twitter.com/search?q="
+}
