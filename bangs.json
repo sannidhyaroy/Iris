@@ -7,7 +7,7 @@
     "url": "https://www.bing.com/search?q=",
     "name": "Bing"
   },
-  "!ddg": {
+  "!d": {
     "url": "https://duckduckgo.com/?q=",
     "name": "DuckDuckGo"
   },
@@ -15,13 +15,37 @@
     "url": "https://www.ecosia.org/search?q=",
     "name": "Ecosia"
   },
+  "!n": {
+    "url": "https://neeva.com/search?q=",
+    "name": "Neeva"
+  },
+  "!s": {
+    "url": "https://www.startpage.com/search?q=",
+    "name": "Startpage"
+  },
   "!a": {
     "url": "https://www.amazon.in/s?k=",
     "name": "Amazon India"
   },
+  "!fk": {
+    "url": "https://www.flipkart.com/search?q=",
+    "name": "Flipkart"
+  },
   "!yt": {
     "url": "https://www.youtube.com/results?search_query=",
     "name": "YouTube"
+  },
+  "!sp": {
+    "url": "https://open.spotify.com/search/",
+    "name": "Spotify"
+  },
+  "!am": {
+    "url": "https://music.apple.com/us/search?term=",
+    "name": "Apple Music"
+  },
+  "!ytm": {
+    "url": "https://music.youtube.com/search?q=",
+    "name": "YouTube Music"
   },
   "!nf": {
     "url": "https://www.netflix.com/search?q=",
@@ -31,6 +55,14 @@
     "url": "https://www.crunchyroll.com/search?q=",
     "name": "Crunchyroll"
   },
+  "!pv": {
+    "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=",
+    "name": "Prime Video"
+  },
+  "!hot": {
+    "url": "https://www.hotstar.com/in/search?q=",
+    "name": "Hotstar"
+  },
   "!ai": {
     "url": "https://www.perplexity.ai/?q=",
     "name": "Perplexity AI"
@@ -39,10 +71,6 @@
     "url": "https://www.reddit.com/search/?q=",
     "name": "Reddit"
   },
-  "!sp": {
-    "url": "https://open.spotify.com/search/",
-    "name": "Spotify"
-  },
   "!mal": {
     "url": "https://myanimelist.net/search/all?q=",
     "name": "MyAnimeList"
@@ -50,6 +78,38 @@
   "!an": {
     "url": "https://anilist.co/search/anime?search=",
     "name": "AniList"
+  },
+  "!udemy": {
+    "url": "https://www.udemy.com/courses/search/?src=ukw&q=",
+    "name": "Udemy"
+  },
+  "!skill": {
+    "url": "https://www.skillshare.com/en/search?query=",
+    "name": "SkillShare"
+  },
+  "!dr": {
+    "url": "https://dribbble.com/search/",
+    "name": "Dribbble"
+  },
+  "!uns": {
+    "url": "https://unsplash.com/s/photos/",
+    "name": "Unsplash"
+  },
+  "!crx": {
+    "url": "https://chrome.google.com/webstore/search/",
+    "name": "Add Chrome Extension"
+  },
+  "!xpi": {
+    "url": "https://addons.mozilla.org/en-US/firefox/search/?q=",
+    "name": "Add Firefox Extension"
+  },
+  "!nobe": {
+    "url": "https://nobe.noton.tk/?VideoID=",
+    "name": "Nobe"
+  },
+  "!ud": {
+    "url": "https://www.urbandictionary.com/define.php?term=",
+    "name": "Urban Dictionary"
   },
   "!w": {
     "url": "https://en.wikipedia.org/wiki/",
