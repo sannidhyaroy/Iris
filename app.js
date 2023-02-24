@@ -1,9 +1,12 @@
 const searchForm = document.querySelector("form");
 const searchInput = document.querySelector("input[name=q]");
 const overlay = document.querySelector(".overlay");
+let loadMsgElement = document.querySelector(".loadMsg");
 
 // Load the bangs configuration from the JSON file
 const BANGS_URLS = {};
+// Load the loading configuration from the JSON file
+const LOAD = {};
 
 fetch("bangs.json")
   .then((response) => response.json())
@@ -12,6 +15,16 @@ fetch("bangs.json")
   })
   .catch((error) => {
     console.error("Failed to load bangs configuration:", error);
+  });
+
+fetch("loading.json")
+  .then((response) => response.json())
+  .then((data) => {
+    const numLoadMsg = Object.keys(data).length;
+    Object.assign(LOAD, data);
+  })
+  .catch((error) => {
+    console.error("Failed to fetch load configuration:", error);
   });
 
 function submitSearchForm() {
@@ -56,6 +69,11 @@ function navigateAI() {
   addOverlay();
 }
 
+function addLoadMsg() {
+  let x = Math.floor((Math.random() * Object.keys(LOAD).length) + 1);
+  loadMsgElement.textContent = LOAD[x];
+}
+
 // Check if a query parameter is present in the URL
 const urlParams = new URLSearchParams(window.location.search);
 const query = urlParams.get("query");
@@ -74,11 +92,13 @@ searchForm.addEventListener("submit", (event) => {
 });
 
 function addOverlay() {
+  addLoadMsg();
   overlay.style.opacity = 1;
   overlay.style.zIndex = 999;
 }
 
 function removeOverlay() {
+  loadMsgElement.textContent = "";
   overlay.style.opacity = 0;
   overlay.style.zIndex = -1;
 }

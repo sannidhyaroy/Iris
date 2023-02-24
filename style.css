@@ -46,6 +46,21 @@ a {
   transition: opacity 0.5s ease;
 }
 
+.overlayMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loadMsg {
+  font-size: 48px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-align: center;
+  margin-inline: 2em;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -91,6 +106,7 @@ button {
 
 .search-bar input[type="search"]::placeholder {
   user-select: none;
+  -webkit-user-select: none;
   pointer-events: none;
 }
 
@@ -145,6 +161,7 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
+
 .MenuBtn {
   width: 7em;
   height: 3.5em;
@@ -213,9 +230,15 @@ button {
     /* border-top-left-radius: 20px;
         border-bottom-left-radius: 20px; */
   }
+
   .menu {
     margin-block: 1.5em;
   }
+
+  .loadMsg {
+    font-size: 30px;
+  }
+
   .primaryMenuBtn {
     width: 6em;
   }
@@ -232,12 +255,19 @@ button {
     font-size: 12px;
     padding: 18px 20px;
   }
+
   .menu {
     margin-block: 1.5em;
   }
+
+  .loadMsg {
+    font-size: 30px;
+  }
+
   .primaryMenuBtn {
     width: 6em;
   }
+
   .askAI {
     display: none;
   }

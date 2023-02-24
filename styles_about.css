@@ -83,6 +83,11 @@ button {
 .footer {
   font-size: 18px;
   user-select: none;
+  -webkit-user-select: none;
+}
+
+.footer-menu {
+  opacity: 0; /* start with 0 opacity */
 }
 
 .footer-logo {
@@ -105,6 +110,7 @@ button {
   cursor: pointer;
   transition: background-color 0.2s ease;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .primaryMenuBtn:hover {
@@ -133,6 +139,7 @@ button {
   font-size: 64px;
   font-family: "Babylonica", "Roboto", sans-serif;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .Introduction {
@@ -148,6 +155,11 @@ button {
   margin: 1rem;
   margin-top: 10rem;
   user-select: none;
+  -webkit-user-select: none;
+  opacity: 0; /* start with 0 opacity */
+  filter: blur(30px); /* start with 30px blur */
+  -webkit-filter: blur(30px);
+  transform: scale(0.5); /* start with half the size */
 }
 
 .Tagline {
@@ -157,6 +169,11 @@ button {
   color: #fdea15;
   margin: 1rem;
   user-select: none;
+  -webkit-user-select: none;
+  opacity: 0; /* start with 0 opacity */
+  filter: blur(10px); /* start with 30px blur */
+  -webkit-filter: blur(10px);
+  transform: translateY(1rem);
 }
 
 .description {
@@ -165,6 +182,7 @@ button {
   align-items: center;
   width: 80%;
   margin: 3em;
+  opacity: 0; /* start with 0 opacity */
 }
 
 .helloIris {
@@ -176,6 +194,7 @@ button {
   padding: 1em 3em;
   color: #1c1c1c;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .qna {
@@ -184,6 +203,7 @@ button {
   gap: 2em;
   margin: 2rem 10rem;
   border-left: 5px solid white;
+  opacity: 0; /* start with 0 opacity */
 }
 
 .q {
@@ -203,6 +223,7 @@ button {
   background-color: rgba(255, 255, 255, 0.5);
   /* set the background color with opacity */
   backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   /* apply a blur filter to the background */
   border-radius: 10em;
   /* add some border-radius to the div */
@@ -216,6 +237,7 @@ button {
   display: flex;
   flex-direction: column;
   width: 80%;
+  opacity: 0; /* start with 0 opacity */
 }
 
 .section-title {
@@ -253,6 +275,7 @@ table {
   margin-bottom: 20px;
   width: 100%;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 td {
@@ -272,6 +295,48 @@ tr:hover {
   width: 0.5rem;
 }
 
+/* When the element becomes visible, apply the following styles */
+.Headline.visible {
+  opacity: 1;
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  transform: scale(1);
+  transition: opacity 0.5s ease-in-out, filter 0.75s ease-in-out,
+    transform 1s ease-in-out;
+  /* animate opacity and transform for 2 seconds */
+}
+
+.Tagline.visible {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+  opacity: 1;
+  transform: translateY(0rem);
+  transition: filter 0.5s ease-in-out 0.8s, opacity 0.25s ease-in-out 0.8s,
+    transform 0.5s ease-in-out 0.8s;
+  /* animate opacity after 2 seconds */
+}
+
+.description.visible {
+  opacity: 1;
+  /* ends with 1 opacity */
+  transition: opacity 0.5s ease-in-out 1s;
+}
+
+.qna.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 1.3s;
+}
+
+.section.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 1.6s;
+}
+
+.footer-menu.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 1.9s;
+}
+
 /* For devices with a screen width of 1080px or less */
 @media only screen and (max-width: 1080px) {
   .table {
@@ -281,6 +346,7 @@ tr:hover {
     font-size: 18px;
   }
 }
+
 /* For devices with a screen width of 600px or less */
 @media only screen and (max-width: 600px) {
   .bg-image {
