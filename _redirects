@@ -1,5 +1,1 @@
-# for root
-/*              /index.html     200
-​
-# for the rest
-/about/*        /about.html     200
+/*.html   /:splat   301!
