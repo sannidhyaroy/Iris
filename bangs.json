@@ -67,9 +67,17 @@
     "url": "https://www.perplexity.ai/?q=",
     "name": "Perplexity AI"
   },
+  "!y": {
+    "url": "https://you.com/search?q=",
+    "name": "You"
+  },
   "!r": {
     "url": "https://www.reddit.com/search/?q=",
     "name": "Reddit"
+  },
+  "!q": {
+    "url": "https://www.quora.com/search/?q=",
+    "name": "Quora"
   },
   "!mal": {
     "url": "https://myanimelist.net/search/all?q=",
