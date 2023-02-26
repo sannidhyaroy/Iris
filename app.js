@@ -48,9 +48,17 @@ function submitSearchForm() {
 
     let bang = bangs[0];
     let searchQuery = words.filter((word) => !word.startsWith("!")).join(" ");
+    let [searchEngine, searchType] = bang.split(".");
+    console.log("searchEngine: " + searchEngine);
+    console.log("searchType:" + searchType);
 
-    if (bang in BANGS_URLS) {
-      searchUrl = BANGS_URLS[bang]["url"] + encodeURIComponent(searchQuery);
+    if (searchEngine in BANGS_URLS) {
+      let bangData = BANGS_URLS[searchEngine];
+      if (searchType && bangData["tags"] && searchType in bangData["tags"]) {
+        searchUrl = bangData["tags"][searchType].replace("%s", encodeURIComponent(searchQuery));
+      } else {
+        searchUrl = bangData["url"].replace("%s", encodeURIComponent(searchQuery));
+      }
     } else {
       searchUrl += encodeURIComponent(query);
     }
