@@ -1,5 +1,5 @@
 // Fetch the JSON data from the bangs.json file
-fetch("bangs.json")
+fetch("/json/bangs.json")
   .then((response) => response.json())
   .then((data) => {
     // Calculate the number of bangs

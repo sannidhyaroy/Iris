@@ -8,7 +8,7 @@ const BANGS_URLS = {};
 // Load the loading configuration from the JSON file
 const LOAD = {};
 
-fetch("bangs.json")
+fetch("/json/bangs.json")
   .then((response) => response.json())
   .then((data) => {
     Object.assign(BANGS_URLS, data);
@@ -17,7 +17,7 @@ fetch("bangs.json")
     console.error("Failed to load bangs configuration:", error);
   });
 
-fetch("loading.json")
+fetch("/json/loading.json")
   .then((response) => response.json())
   .then((data) => {
     const numLoadMsg = Object.keys(data).length;
@@ -49,8 +49,8 @@ function submitSearchForm() {
     let bang = bangs[0];
     let searchQuery = words.filter((word) => !word.startsWith("!")).join(" ");
     let [searchEngine, searchType] = bang.split(".");
-    console.log("searchEngine: " + searchEngine);
-    console.log("searchType:" + searchType);
+    console.log("Search Engine: " + searchEngine);
+    console.log("Search Type:" + searchType);
 
     if (searchEngine in BANGS_URLS) {
       let bangData = BANGS_URLS[searchEngine];

@@ -11,7 +11,7 @@ a {
 
 .bg-image {
   position: fixed;
-  background-image: url("Iris Flower.png");
+  background-image: url("/assets/Iris-Landscape.png");
   top: 0;
   left: 0;
   right: 0;
@@ -359,7 +359,7 @@ tr:hover {
 /* For devices with a screen width of 600px or less */
 @media only screen and (max-width: 600px) {
   .bg-image {
-    background-image: url(Iris-Portrait.png);
+    background-image: url("/assets/Iris-Portrait.png");
   }
 
   .menu {
@@ -444,7 +444,7 @@ tr:hover {
 /* For devices with a screen width of 375px or less */
 @media only screen and (max-width: 375px) {
   .bg-image {
-    background-image: url(Iris-Portrait.png);
+    background-image: url("/assets/Iris-Portrait.png");
   }
 
   .menu {
