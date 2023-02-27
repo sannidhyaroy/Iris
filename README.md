@@ -13,6 +13,14 @@
 </div>
 
 ---
+## **Navigation**
+- [Navigation](#navigation)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [Get in touch](#get-in-touch)
+- [License](#license)
+---
 ## **Features**
 - **Bangs** : Iris supports bangs, which are special characters that act as shortcuts to the web. They work in a similar way as DuckDuckGo Bangs. By using a bang, you can search a website directly without having to visit it first. For example, if your search query contains a `!g` bang, Iris will automatically search for your query on Google. Similarly, if you use `!yt`, you're actually searching videos on YouTube. You can view the list of supported bangs on the [about page](https://iris.noton.tk/about).
 
@@ -25,11 +33,13 @@
 ---
 ## **Getting Started**
 
-To get started with Iris, [fork this repository](https://github.com/sannidhyaroy/Iris/fork) and deploy it on Netlify, either by clicking on the button below or by manually deploying from your Netlify Account's Dashboard by going to `Add new site > Import an existing project` and then linking to your forked repo.
+To get started with Iris, the easiest way would be to click on the button below to deploy it on Netlify.
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sannidhyaroy/iris)
-<!-- [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsannidhyaroy%2Firis&project-name=iris&repository-name=iris&redirect-url=https%3A%2F%2Fgithub.com%2Fsannidhyaroy%2Firis) -->
-After deploying successfully to Netlify, note the domain of your site. Find and replace all instances of `iris.noton.tk` in this repository's files with your site's domain.
+
+The easiest method is sufficient for most. However, if you want to take advantage of the OpenSearch description format, the recommended way would be to [fork this repository](https://github.com/sannidhyaroy/Iris/fork) and then go to this url (`https://app.netlify.com/start/deploy?repository=<your repository url>`), where "`<your repository url>`" should be replaced by the link to your forked repository.
+
+After deploying successfully to Netlify, note the domain of your site. Find and replace all instances of `iris.noton.tk` from your forked repository's files with your Netlify site's domain.
 
 ---
 ## **Contributing**
