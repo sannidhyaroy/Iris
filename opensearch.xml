@@ -2,8 +2,8 @@
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>Iris</ShortName>
   <Description>A Custom Search Engine Implementation by Team Noton</Description>
-  <Image width="48" height="48" type="image/x-icon">https://iris.noton.tk/assets/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://iris.noton.tk/?query={searchTerms}"/>
+  <Image width="48" height="48" type="image/x-icon">https://iris.thenoton.com/assets/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://iris.thenoton.com/?query={searchTerms}"/>
   <InputEncoding>UTF-8</InputEncoding>
   <OutputEncoding>UTF-8</OutputEncoding>
 </OpenSearchDescription>
